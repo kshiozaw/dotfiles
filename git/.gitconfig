@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+
+[include]
+  path = ~/dotfiles/git/.gitconfig.local
+
+[alias]
+  # コミットのハッシュ(%h) Authorの名前(%ad) committerの名前(%cn) コミットメッセージ(%s) 参照名(%d)
+  graph = log --graph --date-order --all --pretty=format:'%h %C(magenta)%ad %C(ul cyan)[%cn]%C(reset) %C(yellow bold)%s %C(red)%w(80)%d' --date=short

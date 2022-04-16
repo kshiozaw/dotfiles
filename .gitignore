@@ -1,0 +1,42 @@
+### general ###
+*
+!**/
+!README.md
+
+### git ###
+nvim/dein
+!/.gitignore
+!/nvim/autoload/**
+!/nvim/colors/**
+!/nvim/rc/**
+!/nvim/VimDevIconsTest/**
+!/nvim/init.vim
+
+### fish ### 
+fish/conf.d/
+fish/completions/
+!/fish/functions/fish_greeting.fish
+!/fish/functions/fish_prompt.fish
+!/fish/config.fish
+
+### git ###
+!/git/.gitconfig
+
+
+### neofetch ###
+!/neofetch/config.conf
+!/neofetch/icon.png
+
+### tmux ###
+!/tmux/.tmux.conf
+
+
+### ignore ###
+*.pem
+*.key
+*.swp
+.DS_Store
+__pycache__/
+.idea/
+*.pyc
+.netrwhist
