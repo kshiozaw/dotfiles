@@ -145,7 +145,10 @@ set termguicolors  " True color
 set background=dark  " 背景色dark
 
 " colorscheme
-" [joshdick/onedark.vim]
+" [navarasu/onedark.nvim]
+" 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
+" style→colorschemeの順番じゃないと反映されない
+let g:onedark_config = {'style': 'dark',}
 colorscheme onedark
 " [EdenEast/nightfox.nvim]
 " colorscheme Nightfox

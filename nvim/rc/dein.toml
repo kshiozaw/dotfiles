@@ -103,3 +103,6 @@ depends = 'fzf'
 # colorscheme
 [[plugins]]
 repo = 'EdenEast/nightfox.nvim'
+
+[[plugins]]
+repo = 'navarasu/onedark.nvim'
