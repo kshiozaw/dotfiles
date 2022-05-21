@@ -123,18 +123,6 @@ set clipboard+=unnamed  " clipboardを使用
 
 
 "#######################################################################################
-" machakann/vim-highlightedyank
-"#######################################################################################
-
-" highlightの間隔(milliseconds,-1=永続)
-let g:highlightedyank_highlight_duration = 300
-" color
-highlight HighlightedyankRegion guibg=#474d5c
-
-
-
-
-"#######################################################################################
 " colors cheme
 "#######################################################################################
 
@@ -160,6 +148,21 @@ colorscheme onedark
 " [gosukiwi/vim-atom-dark]
 " colorscheme atom-dark
 " colorscheme atom-dark-256
+
+
+
+
+"#######################################################################################
+" machakann/vim-highlightedyank
+"#######################################################################################
+
+" ※カラースキームの設定の後に書かないと反映されない
+
+" highlightの間隔(milliseconds,-1=永続)
+let g:highlightedyank_highlight_duration = 300
+" color
+highlight HighlightedyankRegion guibg=#474d5c
+highlight HighlightedyankRegion cterm=reverse gui=reverse
 
 
 
