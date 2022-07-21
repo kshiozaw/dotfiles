@@ -74,7 +74,7 @@ set title  " ターミナルにタイトルを設定する
 syntax enable  " シンタックス有効化
 set encoding=utf8  " uft-8
 
-set mouse=a  " マウスの有効化
+" set mouse=a  " マウスの有効化
 
 " set guifont=DroidSansMono\ Nerd\ Font\ 13  " 半角Font(gVim用)
 " set guifontwide=DroidSansMono\ Nerd\ Font\ 13  " 全角Font(gVim用)
@@ -123,18 +123,6 @@ set clipboard+=unnamed  " clipboardを使用
 
 
 "#######################################################################################
-" machakann/vim-highlightedyank
-"#######################################################################################
-
-" highlightの間隔(milliseconds,-1=永続)
-let g:highlightedyank_highlight_duration = 300
-" color
-highlight HighlightedyankRegion guibg=#474d5c
-
-
-
-
-"#######################################################################################
 " colors cheme
 "#######################################################################################
 
@@ -160,6 +148,20 @@ colorscheme onedark
 " [gosukiwi/vim-atom-dark]
 " colorscheme atom-dark
 " colorscheme atom-dark-256
+
+
+
+
+"#######################################################################################
+" machakann/vim-highlightedyank
+"#######################################################################################
+
+" ※カラースキームの設定の後に書かないと反映されない
+
+" highlightの間隔(milliseconds,-1=永続)
+let g:highlightedyank_highlight_duration = 300
+" color
+highlight HighlightedyankRegion guibg=#474d5c
 
 
 
@@ -277,6 +279,16 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" Remap <C-f> and <C-b> for scroll float windows/popups.
+if has('nvim-0.4.0') || has('patch-8.2.0750')
+  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+endif
 
 
 
