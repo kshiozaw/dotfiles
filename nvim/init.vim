@@ -74,7 +74,7 @@ set title  " ターミナルにタイトルを設定する
 syntax enable  " シンタックス有効化
 set encoding=utf8  " uft-8
 
-set mouse=a  " マウスの有効化
+" set mouse=a  " マウスの有効化
 
 " set guifont=DroidSansMono\ Nerd\ Font\ 13  " 半角Font(gVim用)
 " set guifontwide=DroidSansMono\ Nerd\ Font\ 13  " 全角Font(gVim用)
@@ -162,7 +162,6 @@ colorscheme onedark
 let g:highlightedyank_highlight_duration = 300
 " color
 highlight HighlightedyankRegion guibg=#474d5c
-highlight HighlightedyankRegion cterm=reverse gui=reverse
 
 
 
