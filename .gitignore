@@ -8,6 +8,7 @@ nvim/dein
 !/.gitignore
 !/nvim/autoload/**
 !/nvim/colors/**
+nvim/colors/**/
 !/nvim/rc/**
 !/nvim/VimDevIconsTest/**
 !/nvim/init.vim

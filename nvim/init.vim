@@ -138,6 +138,7 @@ set background=dark  " 背景色dark
 " style→colorschemeの順番じゃないと反映されない
 let g:onedark_config = {'style': 'dark',}
 colorscheme onedark
+colorscheme penny-lane
 " [EdenEast/nightfox.nvim]
 " colorscheme Nightfox
 " colorscheme Dayfox
