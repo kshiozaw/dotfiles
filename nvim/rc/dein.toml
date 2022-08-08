@@ -106,3 +106,11 @@ repo = 'EdenEast/nightfox.nvim'
 
 [[plugins]]
 repo = 'navarasu/onedark.nvim'
+
+# colorscheme(for dev)
+[[plugins]]
+repo = 'cocopon/colorswatch.vim'
+[[plugins]]
+repo = 'cocopon/inspecthi.vim'
+[[plugins]]
+repo = 'gorodinskiy/vim-coloresque'
