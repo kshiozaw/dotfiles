@@ -22,3 +22,6 @@ alias gits="git status"
 alias gitd="git diff"
 alias gitl="git log"
 alias gitg="git log --graph --date-order --all --pretty=format:'%h %C(magenta)%ad %C(ul cyan)[%cn]%C(reset) %C(yellow bold)%s %C(red)%w(80)%d' --date=short"
+
+# g++
+alias g++="g++ --std=c++17"
