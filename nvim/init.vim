@@ -346,6 +346,7 @@ nnoremap <silent><Space>c :Colors<CR>
 " preservim/nerdtree
 "#######################################################################################
 
+"ctrl-wwでnerdtreeとエディターを移動する
 " space+eでnerdtreeを展開
 nnoremap <silent><Space>e :NERDTreeToggle<CR> 
 
