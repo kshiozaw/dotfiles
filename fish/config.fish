@@ -7,7 +7,8 @@
 # normal
 alias abc='source ~/Documents/program/command/abc_fish'
 alias prog='cd ~/Documents/program/'
-alias python='python3'
+alias python='python3.9'
+alias python3='python3.9'
 alias vi='nvim'
 alias vim='nvim'
 alias cat='bat --theme=TwoDark'
