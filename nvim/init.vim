@@ -108,14 +108,15 @@ set clipboard+=unnamed  " clipboardを使用
 " key mapping
 "#######################################################################################
 
-" noremap <up> <nop>
-" noremap <down> <nop>
-" noremap <right> <nop>
-" noremap <left> <nop>
-" noremap! <up> <nop>
-" noremap! <down> <nop>
+" I am not vimmer
+" noremap  <up>    <nop>
+" noremap  <down>  <nop>
+" noremap  <right> <nop>
+" noremap  <left>  <nop>
+" noremap! <up>    <nop>
+" noremap! <down>  <nop>
 " noremap! <right> <nop>
-" noremap! <left> <nop>
+" noremap! <left>  <nop>
 
 
 
@@ -134,8 +135,8 @@ set background=dark  " 背景色dark
 " [navarasu/onedark.nvim]
 " 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
 " style→colorschemeの順番じゃないと反映されない
-let g:onedark_config = {'style': 'dark',}
-colorscheme onedark
+" let g:onedark_config = {'style': 'dark',}
+" colorscheme onedark
 colorscheme penny-lane
 " [EdenEast/nightfox.nvim]
 " colorscheme Nightfox
@@ -194,12 +195,13 @@ endfunction
 " space+mでminimap.vimを展開
 nnoremap <silent><Space>m :call <SID>myMinimapToggle()<CR>
 "nnoremap <silent><Space>m :MinimapToggle<CR>
-let g:minimap_auto_start = 0  " default 0
-let g:minimap_width = 15  " default 10
-let g:minimap_left = 0  " default 0(right):(1(left))
-let g:minimap_highlight_range = 1  " 可視範囲をhighlight
+
+let g:minimap_auto_start = 0        " default 0
+let g:minimap_width = 15            " default 10
+let g:minimap_left = 0              " default 0(right):(1(left))
+let g:minimap_highlight_range = 1   " 可視範囲をhighlight
 let g:minimap_highlight_search = 1  " serch結果のhighlight
-let g:minimap_git_colors = 1  " git変更部分のhighlight
+let g:minimap_git_colors = 1        " git変更部分のhighlight
 
 
 
@@ -252,14 +254,15 @@ let g:gitgutter_sign_modified_removed = 'ww'
 
 let g:ale_lint_on_text_changed = 'normal'
 
-let g:ale_sign_error = '>>'  " エラーマーク
-let g:ale_sign_warning = '--'  " 警告マーク
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+
 let g:ale_linters = {'c': ['gcc'], 'cpp': ['gcc']}  " c/cppをgccでチェックする
 
 " フォーマットを変更
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%][%severity%] %code:%%s'
+let g:ale_echo_msg_format = '[%linter%][%severity%] %code: %%s'
 
 
 
@@ -374,7 +377,8 @@ let g:DevIconsEnableFoldersOpenClose = 1  " fileの開閉の動作
 " vim-nerdtree-syntax-highlight
 let s:rspec_red = 'FE405F'
 let s:git_orange = 'F54D27'
-let s:green = "8FAA54"
+let s:green = '8FAA54'
+
 " ① overwrite
 let g:NERDTreeFileExtensionHighlightFullName = 1  " ファイル名にも適応
 let g:NERDTreeExtensionHighlightColor = {}
