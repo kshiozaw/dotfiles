@@ -76,32 +76,30 @@ set encoding=utf8  " uft-8
 
 " set mouse=a  " マウスの有効化
 
-" set guifont=DroidSansMono\ Nerd\ Font\ 13  " 半角Font(gVim用)
-" set guifontwide=DroidSansMono\ Nerd\ Font\ 13  " 全角Font(gVim用)
-
 " タブの幅
-set expandtab  " タブキーをタイプしたときに、タブの代わりにスペースを入力
-set shiftwidth=2  " Vimが自動的にインデントするときのスペースの数
-set tabstop=2  " タブキーを入力した時のスペースの数
-" ↓
-" pythonファイルの時はtabをspace4にする
+" expandtab  : タブキーをタイプしたときに、タブの代わりにスペースを入力
+" shiftwidth : Vimが自動的にインデントするときのスペースの数
+" tabstop    : タブキーを入力した時のスペースの数
+set filetype
 augroup fileTypeIndent
-    autocmd!
-    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 shiftwidth=4
+  autocmd!
+  autocmd FileType vim    setlocal expandtab tabstop=2 shiftwidth=2
+  autocmd FileType c,cpp  setlocal expandtab tabstop=2 shiftwidth=2
+  autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4
+  autocmd FileType toml   setlocal expandtab tabstop=2 shiftwidth=2
+  autocmd FileType html   setlocal expandtab tabstop=2 shiftwidth=2
 augroup END
 
-set laststatus=2  " statuslineを常に表示
+set laststatus=2           " statuslineを常に表示
 set wildmode=list:longest  " コマンドラインの補完
-set hlsearch  " 検索ハイライト有効
-set wildmenu  " コマンドラインモードでの補完の有効化
-set history=20  " コマンドの履歴
-set ruler  " カーソルの位置をStatusBarに表示
-set guicursor=  " insertモードでcursorの形を変えない(=空白 らしい)
+set hlsearch               " 検索ハイライト有効
+set wildmenu               " コマンドラインモードでの補完の有効化
+set history=20             " コマンドの履歴
+set ruler                  " カーソルの位置をStatusBarに表示
+set guicursor=             " insertモードでcursorの形を変えない(=空白 らしい)
       
 set clipboard+=unnamed  " clipboardを使用
 " set cursorline "cursorlineを表示
-" highlight CursorLine cterm=NONE ctermfg=black ctermbg=white "cursorlinの詳細設定(backgraund=white,charCol=black,太線)
-" highlight CursorLineNr term=bold cterm=NONE ctermfg=yellow ctermbg=NONE
 
 
 
