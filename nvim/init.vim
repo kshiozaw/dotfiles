@@ -76,32 +76,30 @@ set encoding=utf8  " uft-8
 
 " set mouse=a  " マウスの有効化
 
-" set guifont=DroidSansMono\ Nerd\ Font\ 13  " 半角Font(gVim用)
-" set guifontwide=DroidSansMono\ Nerd\ Font\ 13  " 全角Font(gVim用)
-
 " タブの幅
-set expandtab  " タブキーをタイプしたときに、タブの代わりにスペースを入力
-set shiftwidth=2  " Vimが自動的にインデントするときのスペースの数
-set tabstop=2  " タブキーを入力した時のスペースの数
-" ↓
-" pythonファイルの時はtabをspace4にする
+" expandtab  : タブキーをタイプしたときに、タブの代わりにスペースを入力
+" shiftwidth : Vimが自動的にインデントするときのスペースの数
+" tabstop    : タブキーを入力した時のスペースの数
+set filetype
 augroup fileTypeIndent
-    autocmd!
-    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 shiftwidth=4
+  autocmd!
+  autocmd FileType vim    setlocal expandtab tabstop=2 shiftwidth=2
+  autocmd FileType c,cpp  setlocal expandtab tabstop=2 shiftwidth=2
+  autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4
+  autocmd FileType toml   setlocal expandtab tabstop=2 shiftwidth=2
+  autocmd FileType html   setlocal expandtab tabstop=2 shiftwidth=2
 augroup END
 
-set laststatus=2  " statuslineを常に表示
+set laststatus=2           " statuslineを常に表示
 set wildmode=list:longest  " コマンドラインの補完
-set hlsearch  " 検索ハイライト有効
-set wildmenu  " コマンドラインモードでの補完の有効化
-set history=20  " コマンドの履歴
-set ruler  " カーソルの位置をStatusBarに表示
-set guicursor=  " insertモードでcursorの形を変えない(=空白 らしい)
+set hlsearch               " 検索ハイライト有効
+set wildmenu               " コマンドラインモードでの補完の有効化
+set history=20             " コマンドの履歴
+set ruler                  " カーソルの位置をStatusBarに表示
+set guicursor=             " insertモードでcursorの形を変えない(=空白 らしい)
       
 set clipboard+=unnamed  " clipboardを使用
 " set cursorline "cursorlineを表示
-" highlight CursorLine cterm=NONE ctermfg=black ctermbg=white "cursorlinの詳細設定(backgraund=white,charCol=black,太線)
-" highlight CursorLineNr term=bold cterm=NONE ctermfg=yellow ctermbg=NONE
 
 
 
@@ -110,14 +108,15 @@ set clipboard+=unnamed  " clipboardを使用
 " key mapping
 "#######################################################################################
 
-" noremap <up> <nop>
-" noremap <down> <nop>
-" noremap <right> <nop>
-" noremap <left> <nop>
-" noremap! <up> <nop>
-" noremap! <down> <nop>
+" I am not vimmer
+" noremap  <up>    <nop>
+" noremap  <down>  <nop>
+" noremap  <right> <nop>
+" noremap  <left>  <nop>
+" noremap! <up>    <nop>
+" noremap! <down>  <nop>
 " noremap! <right> <nop>
-" noremap! <left> <nop>
+" noremap! <left>  <nop>
 
 
 
@@ -136,8 +135,8 @@ set background=dark  " 背景色dark
 " [navarasu/onedark.nvim]
 " 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
 " style→colorschemeの順番じゃないと反映されない
-let g:onedark_config = {'style': 'dark',}
-colorscheme onedark
+" let g:onedark_config = {'style': 'dark',}
+" colorscheme onedark
 colorscheme penny-lane
 " [EdenEast/nightfox.nvim]
 " colorscheme Nightfox
@@ -196,12 +195,13 @@ endfunction
 " space+mでminimap.vimを展開
 nnoremap <silent><Space>m :call <SID>myMinimapToggle()<CR>
 "nnoremap <silent><Space>m :MinimapToggle<CR>
-let g:minimap_auto_start = 0  " default 0
-let g:minimap_width = 15  " default 10
-let g:minimap_left = 0  " default 0(right):(1(left))
-let g:minimap_highlight_range = 1  " 可視範囲をhighlight
+
+let g:minimap_auto_start = 0        " default 0
+let g:minimap_width = 15            " default 10
+let g:minimap_left = 0              " default 0(right):(1(left))
+let g:minimap_highlight_range = 1   " 可視範囲をhighlight
 let g:minimap_highlight_search = 1  " serch結果のhighlight
-let g:minimap_git_colors = 1  " git変更部分のhighlight
+let g:minimap_git_colors = 1        " git変更部分のhighlight
 
 
 
@@ -254,14 +254,15 @@ let g:gitgutter_sign_modified_removed = 'ww'
 
 let g:ale_lint_on_text_changed = 'normal'
 
-let g:ale_sign_error = '>>'  " エラーマーク
-let g:ale_sign_warning = '--'  " 警告マーク
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+
 let g:ale_linters = {'c': ['gcc'], 'cpp': ['gcc']}  " c/cppをgccでチェックする
 
 " フォーマットを変更
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%][%severity%] %code:%%s'
+let g:ale_echo_msg_format = '[%linter%][%severity%] %code: %%s'
 
 
 
@@ -376,7 +377,8 @@ let g:DevIconsEnableFoldersOpenClose = 1  " fileの開閉の動作
 " vim-nerdtree-syntax-highlight
 let s:rspec_red = 'FE405F'
 let s:git_orange = 'F54D27'
-let s:green = "8FAA54"
+let s:green = '8FAA54'
+
 " ① overwrite
 let g:NERDTreeFileExtensionHighlightFullName = 1  " ファイル名にも適応
 let g:NERDTreeExtensionHighlightColor = {}
