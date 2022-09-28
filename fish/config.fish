@@ -28,3 +28,6 @@ alias gitg="git log --graph --date-order --all --pretty=format:'%h %C(magenta)%a
 
 # g++
 alias g++='g++ --std=c++17'
+
+# fzf
+alias fvim='vim $(fzf)'
