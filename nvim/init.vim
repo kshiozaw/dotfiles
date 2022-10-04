@@ -109,6 +109,13 @@ set clipboard+=unnamed  " clipboardを使用
 " key mapping
 "#######################################################################################
 
+" noremap:  ノーマルモード、ビジュアルモードの再割り当てなしキーマッピング
+" noremap!: コマンドラインモード、インサートモードの再割り当てなしキーマッピング
+nnoremap <Up>   gk
+nnoremap <Down> gj
+nnoremap k gk
+nnoremap j gj
+
 " I am not vimmer
 " noremap  <up>    <nop>
 " noremap  <down>  <nop>
