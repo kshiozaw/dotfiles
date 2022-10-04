@@ -140,22 +140,7 @@ set termguicolors  " True color
 set background=dark  " 背景色dark
 
 " colorscheme
-" [navarasu/onedark.nvim]
-" 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
-" style→colorschemeの順番じゃないと反映されない
-" let g:onedark_config = {'style': 'dark',}
-" colorscheme onedark
 colorscheme penny-lane
-" [EdenEast/nightfox.nvim]
-" colorscheme Nightfox
-" colorscheme Dayfox
-" colorscheme Dawnfox
-" colorscheme Duskfox
-" colorscheme Nordfox
-" colorscheme Terafox
-" [gosukiwi/vim-atom-dark]
-" colorscheme atom-dark
-" colorscheme atom-dark-256
 
 
 
@@ -163,8 +148,6 @@ colorscheme penny-lane
 "#######################################################################################
 " machakann/vim-highlightedyank
 "#######################################################################################
-
-" ※カラースキームの設定の後に書かないと反映されない
 
 " highlightの間隔(milliseconds,-1=永続)
 let g:highlightedyank_highlight_duration = 300
@@ -179,10 +162,7 @@ highlight HighlightedyankRegion guibg=#474d5c
 "#######################################################################################
 
 "color theme
-let g:airline_theme = 'minimalist'  " use
-" let g:airline_theme = 'wombat'
-" let g:airline_theme = 'distinguished'
-" let g:airline_theme = 'jellybeans'
+let g:airline_theme = 'minimalist'
 
 let g:airline#extensions#tabline#enabled = 1  "タブラインを表示
 let g:airline_powerline_fonts = 1  " PowerLine Fontsを使用
