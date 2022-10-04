@@ -88,6 +88,7 @@ augroup fileTypeIndent
   autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4
   autocmd FileType toml   setlocal expandtab tabstop=2 shiftwidth=2
   autocmd FileType html   setlocal expandtab tabstop=2 shiftwidth=2
+  autocmd FileType asm    setlocal expandtab tabstop=2 shiftwidth=2
 augroup END
 
 set laststatus=2           " statuslineを常に表示
