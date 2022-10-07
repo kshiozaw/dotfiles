@@ -5,10 +5,8 @@
 
 # alias
 # normal
-alias abc='source ~/Documents/program/command/abc_fish'
+alias abc='source ~/Documents/program/command/abc_fish.fish'
 alias prog='cd ~/Documents/program/'
-alias vi='nvim'
-alias vim='nvim'
 alias cat='bat --theme=TwoDark'
 
 # python
@@ -17,7 +15,7 @@ alias python3='python3.9'
 
 # exa
 alias ls='exa -ghHl --icons --git --sort=ext'
-alias la='exa -ghHl --icons -a --git --sort=ext'
+alias la='exa -ghHl --icons --git --sort=ext -a'
 alias tree='exa -ghHl --tree --icons --git --sort=ext'
 
 # git
@@ -29,5 +27,7 @@ alias gitg="git log --graph --date-order --all --pretty=format:'%h %C(magenta)%a
 # g++
 alias g++='g++ --std=c++17'
 
-# fzf
+# vim
+alias vi='nvim'
+alias vim='nvim'
 alias fvim='vim $(fzf)'
