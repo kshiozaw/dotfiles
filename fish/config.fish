@@ -5,7 +5,7 @@
 
 # alias
 # normal
-alias abc='source ~/Documents/program/command/abc_fish'
+alias abc='source ~/Documents/program/command/abc_fish.fish'
 alias prog='cd ~/Documents/program/'
 alias vi='nvim'
 alias vim='nvim'
