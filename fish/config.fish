@@ -7,8 +7,6 @@
 # normal
 alias abc='source ~/Documents/program/command/abc_fish.fish'
 alias prog='cd ~/Documents/program/'
-alias vi='nvim'
-alias vim='nvim'
 alias cat='bat --theme=TwoDark'
 
 # python
@@ -29,5 +27,7 @@ alias gitg="git log --graph --date-order --all --pretty=format:'%h %C(magenta)%a
 # g++
 alias g++='g++ --std=c++17'
 
-# fzf
+# vim
+alias vi='nvim'
+alias vim='nvim'
 alias fvim='vim $(fzf)'
