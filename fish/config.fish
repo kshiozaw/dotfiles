@@ -15,7 +15,7 @@ alias python3='python3.9'
 
 # exa
 alias ls='exa -ghHl --icons --git --sort=ext'
-alias la='exa -ghHl --icons -a --git --sort=ext'
+alias la='exa -ghHl --icons --git --sort=ext -a'
 alias tree='exa -ghHl --tree --icons --git --sort=ext'
 
 # git
