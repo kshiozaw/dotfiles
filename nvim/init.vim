@@ -82,9 +82,10 @@ set cindent      " より賢く動作する自動インデント
 " set mouse=a  " マウスの有効化
 
 " タブの幅
-" expandtab  : タブキーをタイプしたときに、タブの代わりにスペースを入力
-" shiftwidth : Vimが自動的にインデントするときのスペースの数
-" tabstop    : タブキーを入力した時のスペースの数
+" expandtab   : タブキーをタイプしたときに、タブの代わりにスペースを入力
+" shiftwidth  : Vimが自動的にインデントするときのスペースの数
+" tabstop     : タブ制御文字に対する見た目上の空白数
+" softtabstop : 見た目上の空白数
 set filetype
 augroup fileTypeIndent
   autocmd!
