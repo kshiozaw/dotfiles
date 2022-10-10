@@ -249,10 +249,16 @@ let g:gitgutter_sign_modified_removed = 'ww'
 
 let g:ale_lint_on_text_changed = 'normal'
 
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = ''
+highlight ALEErrorSign   guibg=#2e373b guifg=#e73647
+highlight ALEWarningSign guibg=#2e373b guifg=#e6b422
 
 let g:ale_linters = {'c': ['gcc'], 'cpp': ['gcc']}  " c/cppをgccでチェックする
+let g:opts = '-std=c++17 -Wall -Wextra'
+let g:ale_cpp_cc_options    = opts
+let g:ale_cpp_gcc_options   = opts
+let g:ale_cpp_clang_options = opts
 
 " フォーマットを変更
 let g:ale_echo_msg_error_str = 'E'
