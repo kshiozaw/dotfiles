@@ -66,20 +66,26 @@ endif
 " General settings
 "#######################################################################################
 
+syntax enable  " シンタックス有効化
+
+set number          " 行番号を表示
+set title           " ターミナルにタイトルを設定する
+set encoding=utf8   " uft-8
 set updatetime=250  " 反映までの時間msec(default=4000)
 
-set number  " 行番号を表示
-set smartindent  " 改行時などに、自動でインデントを設定する
-set title  " ターミナルにタイトルを設定する
-syntax enable  " シンタックス有効化
-set encoding=utf8  " uft-8
+
+" indent
+" set autoindent   " 一つ前の行に基づく自動インデント
+" set smartindent  " C構文を認識した自動インデント
+set cindent      " より賢く動作する自動インデント
 
 " set mouse=a  " マウスの有効化
 
 " タブの幅
-" expandtab  : タブキーをタイプしたときに、タブの代わりにスペースを入力
-" shiftwidth : Vimが自動的にインデントするときのスペースの数
-" tabstop    : タブキーを入力した時のスペースの数
+" expandtab   : タブキーをタイプしたときに、タブの代わりにスペースを入力
+" shiftwidth  : Vimが自動的にインデントするときのスペースの数
+" tabstop     : タブ制御文字に対する見た目上の空白数
+" softtabstop : 見た目上の空白数
 set filetype
 augroup fileTypeIndent
   autocmd!
@@ -244,10 +250,16 @@ let g:gitgutter_sign_modified_removed = 'ww'
 
 let g:ale_lint_on_text_changed = 'normal'
 
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = ''
+highlight ALEErrorSign   guibg=#2e373b guifg=#e73647
+highlight ALEWarningSign guibg=#2e373b guifg=#e6b422
 
 let g:ale_linters = {'c': ['gcc'], 'cpp': ['gcc']}  " c/cppをgccでチェックする
+let g:opts = '-std=c++17 -Wall -Wextra'
+let g:ale_cpp_cc_options    = opts
+let g:ale_cpp_gcc_options   = opts
+let g:ale_cpp_clang_options = opts
 
 " フォーマットを変更
 let g:ale_echo_msg_error_str = 'E'
