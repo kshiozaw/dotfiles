@@ -66,13 +66,18 @@ endif
 " General settings
 "#######################################################################################
 
+syntax enable  " シンタックス有効化
+
+set number          " 行番号を表示
+set title           " ターミナルにタイトルを設定する
+set encoding=utf8   " uft-8
 set updatetime=250  " 反映までの時間msec(default=4000)
 
-set number  " 行番号を表示
-set smartindent  " 改行時などに、自動でインデントを設定する
-set title  " ターミナルにタイトルを設定する
-syntax enable  " シンタックス有効化
-set encoding=utf8  " uft-8
+
+" indent
+" set autoindent   " 一つ前の行に基づく自動インデント
+" set smartindent  " C構文を認識した自動インデント
+set cindent      " より賢く動作する自動インデント
 
 " set mouse=a  " マウスの有効化
 
