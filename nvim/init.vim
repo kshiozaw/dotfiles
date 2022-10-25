@@ -229,9 +229,10 @@ highlight GitGutterDeleteLine        gui=NONE  guifg=NONE     guibg=#39404f  " g
 highlight GitGutterChangeDeleteLine  gui=NONE  guifg=NONE     guibg=#39404f
 
 " 記号の変更
-let g:gitgutter_sign_added = 'g+'
-let g:gitgutter_sign_modified = 'gm'
-let g:gitgutter_sign_removed = 'g-'
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = 'm'
+let g:gitgutter_sign_removed = '-'
+
 let g:gitgutter_sign_removed_first_line = '^^'
 let g:gitgutter_sign_modified_removed = 'ww'
 
