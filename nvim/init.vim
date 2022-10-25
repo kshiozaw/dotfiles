@@ -23,9 +23,7 @@
 " dein
 "#######################################################################################
 
-" プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.config/nvim/dein')
-" dein.vim 本体
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 " dein.vim がなければ github から落としてくる
@@ -36,17 +34,15 @@ if &runtimepath !~# '/dein.vim'
   execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-" 設定開始
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
-  " プラグインリストを収めたTOMLファイル
-  let g:rc_dir    = expand('~/.config/nvim/rc')
-  let s:toml      = g:rc_dir . '/dein.toml'
+  let g:rc_dir = expand('~/.config/nvim/rc')
+  let s:toml   = g:rc_dir . '/dein.toml'
+
   " TOMLを読み込み、キャッシュしておく
   call dein#load_toml(s:toml, {'lazy': 0})
 
-  " 設定終了
   call dein#end()
   call dein#save_state()
 endif
@@ -106,9 +102,7 @@ set wildmenu               " コマンドラインモードでの補完の有効
 set history=20             " コマンドの履歴
 set ruler                  " カーソルの位置をStatusBarに表示
 set guicursor=             " insertモードでcursorの形を変えない(=空白 らしい)
-      
-set clipboard+=unnamed  " clipboardを使用
-" set cursorline "cursorlineを表示
+set clipboard+=unnamed     " clipboardを使用
 
 
 
