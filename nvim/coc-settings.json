@@ -25,8 +25,10 @@
     "typeParameter": "\uf278",
     "default":       "\uf29c"
   },
-  "clangd.fallbackFlags": [ "-std=c++17" ],
 
   "diagnostic.errorSign": "c✗",
-  "diagnostic.warningSign": "c "
+  "diagnostic.warningSign": "c ",
+
+  "clangd.fallbackFlags": [ "-std=c++17" ],
+  "jedi.executable.command": "jedi-language-server"
 }
