@@ -319,6 +319,20 @@ function! ShowDocumentation()
   endif
 endfunction
 
+" coc extensions
+let g:coc_global_extensions = [
+  \'coc-clangd',
+  \'coc-css',
+  \'coc-docker',
+  \'coc-jedi',
+  \'coc-json',
+  \'coc-lists',
+  \'coc-markdownlint',
+  \'coc-toml',
+  \'coc-vimlsp',
+  \'coc-yaml'
+\]
+
 
 
 
