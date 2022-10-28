@@ -93,6 +93,8 @@ augroup fileTypeIndent
   autocmd FileType asm    setlocal expandtab tabstop=2 shiftwidth=2
   autocmd FileType sh     setlocal expandtab tabstop=2 shiftwidth=2
   autocmd FileType fish   setlocal expandtab tabstop=2 shiftwidth=2
+  autocmd FileType java   setlocal expandtab tabstop=4 shiftwidth=4
+
 augroup END
 
 set laststatus=2           " statuslineを常に表示
@@ -316,6 +318,20 @@ function! ShowDocumentation()
     call feedkeys('K', 'in')
   endif
 endfunction
+
+" coc extensions
+let g:coc_global_extensions = [
+  \'coc-clangd',
+  \'coc-css',
+  \'coc-docker',
+  \'coc-jedi',
+  \'coc-json',
+  \'coc-lists',
+  \'coc-markdownlint',
+  \'coc-toml',
+  \'coc-vimlsp',
+  \'coc-yaml'
+\]
 
 
 
