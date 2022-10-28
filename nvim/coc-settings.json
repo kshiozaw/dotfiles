@@ -25,5 +25,8 @@
     "typeParameter": "\uf278",
     "default":       "\uf29c"
   },
-  "clangd.fallbackFlags": [ "-std=c++17" ]
+  "clangd.fallbackFlags": [ "-std=c++17" ],
+
+  "diagnostic.errorSign": "c✗",
+  "diagnostic.warningSign": "c "
 }
