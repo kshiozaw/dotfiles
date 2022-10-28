@@ -2,6 +2,7 @@
 
 # path
 # set PATH /usr/local/opt/llvm/bin $PATH  # coc-nvimのc++用
+set PATH /usr/local/mysql/bin $PATH  # mysql
 
 # alias
 # normal
