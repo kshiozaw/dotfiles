@@ -32,3 +32,6 @@ alias g++='g++ --std=c++17'
 alias vi='nvim'
 alias vim='nvim'
 alias fvim='vim $(fzf)'
+
+# else
+alias myip='curl ifconfig.co/'
