@@ -81,7 +81,7 @@ set cindent      " より賢く動作する自動インデント
 " タブの幅
 " expandtab   : タブキーをタイプしたときに、タブの代わりにスペースを入力
 " shiftwidth  : Vimが自動的にインデントするときのスペースの数
-" tabstop     : タブ制御文字に対する見た目上の空白数
+" tabstop     : タブストップの間隔(タブ制御文字に対する見た目上の空白数)
 " softtabstop : 見た目上の空白数
 set filetype
 augroup fileTypeIndent
