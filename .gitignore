@@ -8,6 +8,7 @@
 
 ### nvim ###
 nvim/dein
+nvim/coc
 !/.gitignore
 !/nvim/autoload/**
 !/nvim/colors/**
