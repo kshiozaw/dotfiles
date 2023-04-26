@@ -81,7 +81,7 @@ set cindent      " より賢く動作する自動インデント
 " タブの幅
 " expandtab   : タブキーをタイプしたときに、タブの代わりにスペースを入力
 " shiftwidth  : Vimが自動的にインデントするときのスペースの数
-" tabstop     : タブ制御文字に対する見た目上の空白数
+" tabstop     : タブストップの間隔(タブ制御文字に対する見た目上の空白数)
 " softtabstop : 見た目上の空白数
 set filetype
 augroup fileTypeIndent
@@ -171,6 +171,9 @@ let g:airline_theme = 'minimalist'
 
 let g:airline#extensions#tabline#enabled = 1  "タブラインを表示
 let g:airline_powerline_fonts = 1  " PowerLine Fontsを使用
+
+" エラー対策(コメントアウトで問題なかったら消す)
+let g:airline#extensions#disable_rtp_load=1
 
 
 
@@ -326,6 +329,7 @@ let g:coc_global_extensions = [
   \'coc-css',
   \'coc-docker',
   \'coc-fish',
+  \'coc-java',
   \'coc-jedi',
   \'coc-json',
   \'coc-lists',
