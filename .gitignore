@@ -8,6 +8,7 @@
 
 ### nvim ###
 nvim/dein
+nvim/coc
 !/.gitignore
 !/nvim/autoload/**
 !/nvim/colors/**
@@ -24,13 +25,15 @@ fish/completions/
 !/fish/functions/fish_prompt.fish
 !/fish/config.fish
 
-
 ### neofetch ###
 !/neofetch/config.conf
 !/neofetch/icon.png
 
 ### tmux ###
 !/tmux/.tmux.conf
+
+### iterm ###
+!/iterm2/OneDark.json
 
 ### ignore ###
 *.pem
