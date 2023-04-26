@@ -9,7 +9,6 @@ if status is-interactive
   set PATH /opt/homebrew/bin $PATH
   set PATH /opt/homebrew/opt/openjdk@17/bin $PATH
   set PATH /Users/kyokio/.docker/bin $PATH
-  set PATH /Applications/Docker.app/Contents/Resources/bin/ $PATH
   # set PATH /usr/local/opt/llvm/bin $PATH  # coc-nvimのc++用
 end
 
@@ -20,6 +19,8 @@ end
 # normal
 alias abc='source ~/Documents/program/command/abc_fish.fish'
 alias prog='cd ~/Documents/program/'
+
+# bat
 alias cat='bat --theme=TwoDark'
 
 # python
