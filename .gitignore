@@ -24,6 +24,7 @@ fish/completions/
 !/fish/functions/fish_greeting.fish
 !/fish/functions/fish_prompt.fish
 !/fish/config.fish
+!/fish/fish_plugins
 
 ### neofetch ###
 !/neofetch/config.conf
