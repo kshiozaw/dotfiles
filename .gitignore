@@ -36,6 +36,9 @@ fish/completions/
 ### iterm ###
 !/iterm2/OneDark.json
 
+### brew ###
+!/brew/.Brewfile
+
 ### ignore ###
 *.pem
 *.key
