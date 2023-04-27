@@ -47,16 +47,14 @@ merged = '0'
 [[plugins]]
 repo = 'preservim/nerdtree'
 
-
-# iconを追加するプラグイン
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-
 # NERDTreeのsyntaxの設定
 [[plugins]]
 # repo = 'tiagofumo/vim-nerdtree-syntax-highlight' <-invalid error
 repo = 'johnstef99/vim-nerdtree-syntax-highlight' # <-forkしてfixしたもの
+
+# iconを追加するプラグイン
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
 
 
 # gitdiff
@@ -84,7 +82,7 @@ repo = 'machakann/vim-highlightedyank'
 repo = 'cespare/vim-toml'
 
 
-# tomlのシンタックス有効化
+# 行ごとのコメントアウト
 [[plugins]]
 repo = 'tpope/vim-commentary'
 
@@ -105,6 +103,7 @@ repo = 'EdenEast/nightfox.nvim'
 
 [[plugins]]
 repo = 'navarasu/onedark.nvim'
+
 
 # colorscheme(for dev)
 [[plugins]]
