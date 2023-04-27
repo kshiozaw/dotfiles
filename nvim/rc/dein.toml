@@ -43,7 +43,7 @@ rev = 'release'
 merged = '0'
 
 
-# 非同期ファイラー(fernじゃなくてこっちにする)
+# 非同期ファイラー
 [[plugins]]
 repo = 'preservim/nerdtree'
 
@@ -55,7 +55,8 @@ repo = 'ryanoasis/vim-devicons'
 
 # NERDTreeのsyntaxの設定
 [[plugins]]
-repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
+# repo = 'tiagofumo/vim-nerdtree-syntax-highlight' <-invalid error
+repo = 'johnstef99/vim-nerdtree-syntax-highlight' # <-forkしてfixしたもの
 
 
 # gitdiff
