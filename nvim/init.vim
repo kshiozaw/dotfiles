@@ -369,51 +369,26 @@ nnoremap <silent><Space>c :Colors<CR>
 " space+eでnerdtreeを展開
 nnoremap <silent><Space>e :NERDTreeToggle<CR> 
 
-
-" let g:NERDTreeHighlightFolders = 1  " defaultで1だと思う
-" let g:NERDTreeHighlightFoldersFullName = 1  " defaultで1だと思う
-
-let g:webdevicons_enable_nerdtree = 1  " ?
-
-let g:NERDTreeDirArrows = 1  " ?
 let NERDTreeWinSize=25  " NerdTreeのwidth
 let NERDTreeShowHidden = 1  " 隠しファイルを表示
 
 
-" vim-devicons
+"###
+" ryanoasis/vim-devicons
+"###
+
+let g:webdevicons_enable_nerdtree = 1  " nerdfontの有効化(default=1)
 let g:webdevicons_conceal_nerdtree_brackets = 1  " NERDTreeのアイコンの[](0→[icon],1→icon)
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '   " iconの後のスペース
-
-
-" dir-icons
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1  " unicode
 let g:DevIconsEnableFoldersOpenClose = 1  " fileの開閉の動作
-" let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
-" let g:DevIconsDefaultFolderOpenSymbol = ''
+let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+let g:DevIconsDefaultFolderOpenSymbol = ''
 
-
-" vim-nerdtree-syntax-highlight
-let s:rspec_red = 'FE405F'
-let s:git_orange = 'F54D27'
-let s:green = '8FAA54'
-
-" ① overwrite
-let g:NERDTreeFileExtensionHighlightFullName = 1  " ファイル名にも適応
-let g:NERDTreeExtensionHighlightColor = {}
-" let g:NERDTreeExtensionHighlightColor['css'] = ''  " set color
-" ② 完全一致で指定して変える
-let g:NERDTreeExactMatchHighlightFullName = 1  " ファイル名にも適応
-let g:NERDTreeExactMatchHighlightColor = {}
-" let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange  " set color
-" ③ パターンマッチで指定して変える
-let g:NERDTreePatternMatchHighlightFullName = 1  " ファイル名にも適応
-let g:NERDTreePatternMatchHighlightColor = {}
-" let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red  " set color
-
-
-" file-icons(overwiteできる)
+" file-icons
 " unicode(https://github.com/ryanoasis/nerd-fonts/tree/master/images)
-" ① overwrite
+
+" ① ファイル種類指定
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['html'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['css'] = ''
@@ -429,20 +404,50 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['pem'] = ''
 " let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['coffee'] = ''
 " let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['rb'] = ''
 
-" ② 完全一致で指定して変える
+" ② 完全一致指定
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.gitignore'] = ''  " or' '
-let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange  " set color
 " let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.vimrc'] = ''  " →
 " let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['ormconfig.js'] = ''
 " let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.env'] = 'ﭩ'
 " let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.editorconfig'] = ''
 " let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['.npmrc'] = ''
 " let g:WebDevIconsUnicodeDecorateFileNodesExactSymbols['src'] = ''
-"
-" ③ パターンマッチで指定して変える
+
+" ③ パターンマッチ指定
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.vimrc'] = ''  " →
-let g:NERDTreePatternMatchHighlightColor['.vimrc'] = s:green
 " let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.git'] = ''
 " let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.test.ts'] = 'ﭧ'
+
+
+"###
+" tiagofumo/vim-nerdtree-syntax-highlight
+"###
+
+" colors
+let s:rspec_red = 'fe405f'
+let s:git_orange = 'f54d27'
+let s:green = '8faa54'
+
+" ファイル名にも適用
+let g:NERDTreeFileExtensionHighlightFullName = 1  " ① ファイル種類指定
+let g:NERDTreeExactMatchHighlightFullName = 1     " ② 完全一致指定
+let g:NERDTreePatternMatchHighlightFullName = 1   " ③ パターンマッチ指定
+
+" 初期化
+let g:NERDTreeExtensionHighlightColor = {}     " ① ファイル種類指定
+let g:NERDTreeExactMatchHighlightColor = {}    " ② 完全一致指定
+let g:NERDTreePatternMatchHighlightColor = {}  " ③ パターンマッチ指定
+
+" ① ファイル種類指定
+" ex)let g:NERDTreeExtensionHighlightColor['css'] = ''
+let g:NERDTreeExtensionHighlightColor['cpp'] = s:git_orange
+
+" ② 完全一致指定
+" let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange
+let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange
+
+" ③ パターンマッチ指定
+" ex)let g:NERDTreePatternMatchHighlightColor['.*_spec\.rb$'] = s:rspec_red
+let g:NERDTreePatternMatchHighlightColor['.vimrc'] = s:green
