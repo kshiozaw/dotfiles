@@ -69,12 +69,7 @@ set number          " 行番号を表示
 set title           " ターミナルにタイトルを設定する
 set encoding=utf8   " uft-8
 set updatetime=250  " 反映までの時間msec(default=4000)
-
-
-" indent
-" set autoindent   " 一つ前の行に基づく自動インデント
-" set smartindent  " C構文を認識した自動インデント
-set cindent      " より賢く動作する自動インデント
+set cindent         " 自動インデント
 
 " set mouse=a  " マウスの有効化
 
@@ -98,9 +93,9 @@ augroup fileTypeIndent
 augroup END
 
 set laststatus=2           " statuslineを常に表示
+set wildmenu               " コマンドラインモードでの補完の有効化
 set wildmode=list:longest  " コマンドラインの補完
 set hlsearch               " 検索ハイライト有効
-set wildmenu               " コマンドラインモードでの補完の有効化
 set history=20             " コマンドの履歴
 set ruler                  " カーソルの位置をStatusBarに表示
 set guicursor=             " insertモードでcursorの形を変えない(=空白 らしい)
@@ -134,16 +129,12 @@ nnoremap j gj
 
 
 "#######################################################################################
-" colors cheme
+" color scheme
 "#######################################################################################
 
-" color setting
-" set t_Co=256  " 256色
 set termguicolors  " True color
+set background=dark
 
-set background=dark  " 背景色dark
-
-" colorscheme
 colorscheme penny-lane
 
 
@@ -189,11 +180,10 @@ function s:myMinimapToggle()
 endfunction
 " space+mでminimap.vimを展開
 nnoremap <silent><Space>m :call <SID>myMinimapToggle()<CR>
-"nnoremap <silent><Space>m :MinimapToggle<CR>
 
-let g:minimap_auto_start = 0        " default 0
-let g:minimap_width = 15            " default 10
-let g:minimap_left = 0              " default 0(right):(1(left))
+let g:minimap_auto_start = 0        " default=0
+let g:minimap_width = 15            " default=10
+let g:minimap_left = 0              " default=0(0:right),(1(left))
 let g:minimap_highlight_range = 1   " 可視範囲をhighlight
 let g:minimap_highlight_search = 1  " serch結果のhighlight
 let g:minimap_git_colors = 1        " git変更部分のhighlight
@@ -208,18 +198,14 @@ let g:minimap_git_colors = 1        " git変更部分のhighlight
 " keymap
 " ① sign,LINEをデフォルトで非表示にしてkeymapで切り替え
 let g:gitgutter_signs = 0
-let g:gitgutter_highlight_lines = 0  " ハイライトを常に有効
+let g:gitgutter_highlight_lines = 0
 function s:myGitGutterToggle()
-  "myGitGutterToggle
+  " myGitGutterToggle
   :GitGutterSignsToggle
   :GitGutterLineHighlightsToggle
 endfunction
 " space+dでvim-gitgutterを展開
 nnoremap <silent><Space>d :call <SID>myGitGutterToggle()<CR>
-" ② signを常に表示でLINEをkeymapで切り替え
-" let g:gitgutter_signs = 1
-" let g:gitgutter_highlight_lines = 0  " ハイライトを常に無効
-" nnoremap <silent><Space>d :GitGutterLineHighlightsToggle<CR>   " keymap
 
 " ハイライトの変更
 " columnのハイライト
@@ -274,8 +260,6 @@ let g:ale_echo_msg_format = '[%linter%][%severity%] %code: %%s'
 "#######################################################################################
 
 " tabでpopupを移動(↑:tab,↓:tab+shift)
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
       \ coc#pum#visible() ? coc#pum#next(1):
       \ CheckBackspace() ? "\<Tab>" :
@@ -373,9 +357,9 @@ let NERDTreeWinSize=25  " NerdTreeのwidth
 let NERDTreeShowHidden = 1  " 隠しファイルを表示
 
 
-"###
+"###########################################
 " ryanoasis/vim-devicons
-"###
+"###########################################
 
 let g:webdevicons_enable_nerdtree = 1  " nerdfontの有効化(default=1)
 let g:webdevicons_conceal_nerdtree_brackets = 1  " NERDTreeのアイコンの[](0→[icon],1→icon)
@@ -421,9 +405,9 @@ let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.vimrc'] = ''  " 
 " let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.test.ts'] = 'ﭧ'
 
 
-"###
+"###########################################
 " tiagofumo/vim-nerdtree-syntax-highlight
-"###
+"###########################################
 
 " colors
 let s:rspec_red = 'fe405f'
