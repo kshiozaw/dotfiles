@@ -39,6 +39,9 @@ fish/completions/
 ### brew ###
 !/brew/.Brewfile
 
+### key ###
+!/keybord/dz60rgb_v2.layout.json
+
 ### ignore ###
 *.pem
 *.key

@@ -104,7 +104,7 @@
       "KC_SLCK",
       "KC_PAUS",
       "RESET",
-      "KC_UNDS",
+      "S(KC_MINS)",
       "KC_LEFT",
       "KC_DOWN",
       "KC_RGHT",
@@ -117,7 +117,7 @@
       "KC_HOME",
       "KC_PGUP",
       "KC_NO",
-      "0x5cde",
+      "KC_NO",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
@@ -189,7 +189,7 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_NO",
-      "0x5cde",
+      "KC_NO",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
@@ -291,5 +291,6 @@
       "KC_NO",
       "KC_TRNS"
     ]
-  ]
+  ],
+  "encoders": []
 }
