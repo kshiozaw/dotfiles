@@ -90,6 +90,7 @@ augroup fileTypeIndent
   autocmd FileType sh     setlocal expandtab tabstop=2 shiftwidth=2
   autocmd FileType fish   setlocal expandtab tabstop=2 shiftwidth=2
   autocmd FileType java   setlocal expandtab tabstop=4 shiftwidth=4
+  autocmd FileType xml    setlocal expandtab tabstop=2 shiftwidth=2
 augroup END
 
 set laststatus=2           " statuslineを常に表示
