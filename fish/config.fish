@@ -42,11 +42,9 @@ alias gitl='git log'
 alias gitg="git log --graph --date-order --all --pretty=format:'%h %C(magenta)%ad %C(ul cyan)[%cn]%C(reset) %C(yellow bold)%s %C(red)%w(80)%d' --date=short"
 
 # gcc/g++
-# シンボリックリンクの張り替えが面倒からaliasを使う
-# alias gcc='gcc-12 '
-# alias g++='g++-12 --std=c++17'
-alias gcc='gcc-12 --sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk'
-alias g++='g++-12 --sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk --std=c++17'
+# include searchにbits/stdc++.h用のpathを追加
+alias gcc='gcc-13 --sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk'
+alias g++='g++-13 --sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk --std=c++17'
 
 # vim
 alias vi='nvim'
