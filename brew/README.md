@@ -9,5 +9,3 @@ homebrewのリストをファイルに書き込み
 ```shell
 brew bundle dump --force --file '~/dotfiles/brew/.Brewfile'
 ```
-
-
