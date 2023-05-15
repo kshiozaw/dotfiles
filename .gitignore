@@ -42,6 +42,9 @@ fish/completions/
 ### key ###
 !/keybord/dz60rgb_v2.layout.json
 
+### broot ###
+!/broot/conf.hjson
+
 ### ignore ###
 *.pem
 *.key
