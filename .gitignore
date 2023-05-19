@@ -21,8 +21,10 @@ nvim/colors/**/
 ### fish ### 
 fish/conf.d/
 fish/completions/
+!/fish/functions/abc.fish
 !/fish/functions/fish_greeting.fish
 !/fish/functions/fish_prompt.fish
+!/fish/functions/mkcd.fish
 !/fish/config.fish
 !/fish/fish_plugins
 
