@@ -316,6 +316,7 @@ let g:coc_global_extensions = [
   \'coc-css',
   \'coc-docker',
   \'coc-fish',
+  \'coc-html',
   \'coc-java',
   \'coc-jedi',
   \'coc-json',
@@ -323,6 +324,7 @@ let g:coc_global_extensions = [
   \'coc-markdownlint',
   \'coc-toml',
   \'coc-vimlsp',
+  \'coc-xml',
   \'coc-yaml'
 \]
 
