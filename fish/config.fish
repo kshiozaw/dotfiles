@@ -17,7 +17,6 @@ end
 # alias
 #######################################
 # normal
-alias abc='source ~/Documents/program/command/abc_fish.fish'
 alias prog='cd ~/Documents/program/'
 
 # bat
