@@ -25,6 +25,7 @@ nvim/rc/**
 fish/conf.d/
 fish/completions/
 !/fish/config_personal.fish
+!/fish/config_work.fish
 !/fish/functions/abc.fish
 !/fish/functions/fish_greeting.fish
 !/fish/functions/fish_prompt.fish
