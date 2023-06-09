@@ -13,7 +13,8 @@ nvim/coc
 !/nvim/autoload/**
 !/nvim/colors/**
 nvim/colors/**/
-!/nvim/rc/dein_personl.toml
+nvim/rc/**
+!/nvim/rc/dein_personal.toml
 !/nvim/rc/dein_work.toml
 !/nvim/VimDevIconsTest/**
 !/nvim/init_personal.vim
