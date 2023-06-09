@@ -4,18 +4,21 @@
 !README.md
 
 ### git ###
+!/.gitignore
 !/git/.gitconfig
 
 ### nvim ###
 nvim/dein
 nvim/coc
-!/.gitignore
 !/nvim/autoload/**
 !/nvim/colors/**
 nvim/colors/**/
-!/nvim/rc/**
+nvim/rc/**
+!/nvim/rc/dein_personal.toml
+!/nvim/rc/dein_work.toml
 !/nvim/VimDevIconsTest/**
-!/nvim/init.vim
+!/nvim/init_personal.vim
+!/nvim/init_work.vim
 !/nvim/coc-settings.json
 
 ### fish ### 
