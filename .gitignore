@@ -10,26 +10,25 @@
 ### nvim ###
 nvim/dein
 nvim/coc
-!/nvim/autoload/**
-!/nvim/colors/**
 nvim/colors/**/
 nvim/rc/**
+!/nvim/autoload/**
+!/nvim/coc-settings.json
+!/nvim/init_personal.vim
+!/nvim/init_work.vim
 !/nvim/rc/dein_personal.toml
 !/nvim/rc/dein_work.toml
 !/nvim/VimDevIconsTest/**
-!/nvim/init_personal.vim
-!/nvim/init_work.vim
-!/nvim/coc-settings.json
 
 ### fish ### 
 fish/conf.d/
 fish/completions/
+!/fish/config.fish
+!/fish/fish_plugins
 !/fish/functions/abc.fish
 !/fish/functions/fish_greeting.fish
 !/fish/functions/fish_prompt.fish
 !/fish/functions/mkcd.fish
-!/fish/config.fish
-!/fish/fish_plugins
 
 ### neofetch ###
 !/neofetch/config.conf
