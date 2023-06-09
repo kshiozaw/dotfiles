@@ -14,8 +14,10 @@ nvim/coc
 !/nvim/colors/**
 nvim/colors/**/
 !/nvim/rc/dein_personl.toml
+!/nvim/rc/dein_work.toml
 !/nvim/VimDevIconsTest/**
 !/nvim/init_personal.vim
+!/nvim/init_work.vim
 !/nvim/coc-settings.json
 
 ### fish ### 
