@@ -42,7 +42,7 @@ fish/completions/
 !/iterm2/OneDark.json
 
 ### brew ###
-!/brew/.Brewfile
+!/brew/.Brewfile_personal
 
 ### key ###
 !/keybord/dz60rgb_v2.layout.json
