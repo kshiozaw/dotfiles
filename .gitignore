@@ -28,7 +28,8 @@ fish/completions/
 !/fish/fish_plugins
 !/fish/functions/abc.fish
 !/fish/functions/fish_greeting.fish
-!/fish/functions/fish_prompt.fish
+!/fish/functions/fish_prompt_personal.fish
+!/fish/functions/fish_prompt_work.fish
 !/fish/functions/mkcd.fish
 
 ### neofetch ###
