@@ -104,6 +104,9 @@ repo = 'EdenEast/nightfox.nvim'
 [[plugins]]
 repo = 'navarasu/onedark.nvim'
 
+[[plugins]]
+repo = 'folke/tokyonight.nvim'
+
 
 # colorscheme(for dev)
 [[plugins]]
