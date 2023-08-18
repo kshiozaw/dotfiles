@@ -44,7 +44,7 @@ fish/completions/
 
 ### brew ###
 !/brew/.Brewfile_personal
-!/brew/.Brewfile_work
+# !/brew/.Brewfile_work
 
 ### key ###
 !/keybord/dz60rgb_v2.layout.json
