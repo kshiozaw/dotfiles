@@ -14,7 +14,7 @@ function _git_branch
   set -l git_branch (git branch 2>/dev/null | grep -e '\*' | sed 's/^..\(.*\)/\1/')
   if string length -q -- $git_branch
     printf (set_color grey)' on '
-    printf (set_color $gold)' %s ' $git_branch
+    printf (set_color $gold)' %s' $git_branch
   end
   set_color normal
 end
@@ -23,9 +23,9 @@ function fish_prompt
   # check status code
   set -l last_status $status
   if [ $last_status -eq 0 ]
-    set status_icon (set_color $orange_deep)' '
+    set status_icon (set_color $orange_deep)'  '
   else
-    set status_icon (set_color $orange_deep)' '
+    set status_icon (set_color $orange_deep)'  '
   end
 
   _prompt_dir
