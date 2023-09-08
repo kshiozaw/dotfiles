@@ -1,6 +1,6 @@
 # kyokio fish
 
-source ./config_common.fish
+source ~/.config/fish/config_common.fish
 
 #######################################
 # PATH
