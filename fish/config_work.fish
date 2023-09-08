@@ -21,6 +21,10 @@ alias ls='exa -ghHl --icons --git --sort=ext'
 alias la='exa -ghHl --icons --git --sort=ext -a'
 alias tree='exa -ghHl --tree --icons --git --sort=ext'
 
+# python
+alias pip='python3 -m pip'
+
+
 # git
 alias gits='git status'
 alias gitd='git diff'
