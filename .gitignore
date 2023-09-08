@@ -23,6 +23,7 @@ nvim/rc/**
 ### fish ### 
 fish/conf.d/
 fish/completions/
+!/fish/config_common.fish
 !/fish/config_personal.fish
 !/fish/config_work.fish
 !/fish/fish_plugins

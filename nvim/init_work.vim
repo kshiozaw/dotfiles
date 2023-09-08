@@ -237,7 +237,7 @@ let g:gitgutter_sign_modified_removed = 'ww'
 
 let g:ale_lint_on_text_changed = 'alwayes'
 
-let g:ale_sign_error = '✗'
+let g:ale_sign_error = '✗✗'
 let g:ale_sign_warning = ''
 highlight ALEErrorSign   guibg=#2e373b guifg=#e73647
 highlight ALEWarningSign guibg=#2e373b guifg=#e6b422
