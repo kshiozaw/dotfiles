@@ -4,29 +4,34 @@
 !README.md
 
 ### git ###
+!/.gitignore
 !/git/.gitconfig
 
 ### nvim ###
 nvim/dein
 nvim/coc
-!/.gitignore
-!/nvim/autoload/**
-!/nvim/colors/**
 nvim/colors/**/
-!/nvim/rc/**
-!/nvim/VimDevIconsTest/**
-!/nvim/init.vim
+nvim/rc/**
+!/nvim/autoload/**
 !/nvim/coc-settings.json
+!/nvim/init_personal.vim
+!/nvim/init_work.vim
+!/nvim/rc/dein_personal.toml
+!/nvim/rc/dein_work.toml
+!/nvim/VimDevIconsTest/**
 
 ### fish ### 
 fish/conf.d/
 fish/completions/
+!/fish/config_common.fish
+!/fish/config_personal.fish
+!/fish/config_work.fish
+!/fish/fish_plugins
 !/fish/functions/abc.fish
 !/fish/functions/fish_greeting.fish
-!/fish/functions/fish_prompt.fish
+!/fish/functions/fish_prompt_personal.fish
+!/fish/functions/fish_prompt_work.fish
 !/fish/functions/mkcd.fish
-!/fish/config.fish
-!/fish/fish_plugins
 
 ### neofetch ###
 !/neofetch/config.conf
@@ -39,7 +44,8 @@ fish/completions/
 !/iterm2/OneDark.json
 
 ### brew ###
-!/brew/.Brewfile
+!/brew/.Brewfile_personal
+!/brew/.Brewfile_work
 
 ### key ###
 !/keybord/dz60rgb_v2.layout.json

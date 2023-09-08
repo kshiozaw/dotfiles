@@ -63,8 +63,8 @@ repo = 'airblade/vim-gitgutter'
 
 
 # minimap
-[[plugins]]
-repo = 'wfxr/minimap.vim'
+# [[plugins]]
+# repo = 'wfxr/minimap.vim'
 
 
 # auto pairs

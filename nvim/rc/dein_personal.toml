@@ -1,0 +1,117 @@
+######################################################################################################################################################## 
+#                                                                                                                                                      #
+#       ,-.                               ,-.                                                                                                ____      #
+#   ,--/ /|                           ,--/ /|    ,--,                                                                      ,--,            ,'  , `.    #
+# ,--. :/ |                 ,---.   ,--. :/ |  ,--.'|       ,---.                ,---,                ,---.              ,--.'|         ,-+-,.' _ |    #
+# :  : ' /                 '   ,'\  :  : ' /   |  |,       '   ,'\           ,-+-. /  |              '   ,'\       .---. |  |,       ,-+-. ;   , ||    #
+# |  '  /          .--,   /   /   | |  '  /    `--'_      /   /   |         ,--.'|'   |    ,---.    /   /   |    /.  ./| `--'_      ,--.'|'   |  ||    #
+# '  |  :        /_ ./|  .   ; ,. : '  |  :    ,' ,'|    .   ; ,. :        |   |  ,"' |   /     \  .   ; ,. :  .-' . ' | ,' ,'|    |   |  ,', |  |,    #
+# |  |   \    , ' , ' :  '   | |: : |  |   \   '  | |    '   | |: :        |   | /  | |  /    /  | '   | |: : /___/ \: | '  | |    |   | /  | |--'     #
+# '  : |. \  /___/ \: |  '   | .; : '  : |. \  |  | :    '   | .; :        |   | |  | | .    ' / | '   | .; : .   \  ' . |  | :    |   : |  | ,        #
+# |  | ' \ \  .  \  ' |  |   :    | |  | ' \ \ '  : |__  |   :    |        |   | |  |/  '   ;   /| |   :    |  \   \   ' '  : |__  |   : |  |/         #
+# '  : |--'    \  ;   :   \   \  /  '  : |--'  |  | '.'|  \   \  /   ___   |   | |--'   '   |  / |  \   \  /    \   \    |  | '.'| |   | |`-'          #
+# ;  |,'        \  \  ;    `----'   ;  |,'     ;  :    ;   `----'   /  .\  |   |/       |   :    |   `----'      \   \ | ;  :    ; |   ;/              #
+# '--'           :  \  \            '--'       |  ,   /             \  ; | '---'         \   \  /                 '---"  |  ,   /  '---'               #
+#                 \  ' ;                        ---`-'               `--"                 `----'                          ---`-'                       #
+#                  `--`                                                                                                                                #
+#                                                                                                                                                      #
+########################################################################################################################################################
+
+
+# plugin管理
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+
+# ステータスバーの装飾
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+# airlineのテーマ
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+
+# 構文チェック
+[[plugins]]
+repo = 'dense-analysis/ale'
+
+
+# 補完
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+merged = '0'
+
+
+# 非同期ファイラー
+[[plugins]]
+repo = 'preservim/nerdtree'
+
+# NERDTreeのsyntaxの設定
+[[plugins]]
+# repo = 'tiagofumo/vim-nerdtree-syntax-highlight' <-invalid error
+repo = 'johnstef99/vim-nerdtree-syntax-highlight' # <-forkしてfixしたもの
+
+# iconを追加するプラグイン
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+
+# gitdiff
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+
+# minimap
+[[plugins]]
+repo = 'wfxr/minimap.vim'
+
+
+# auto pairs
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+
+# yank範囲
+[[plugins]]
+repo = 'machakann/vim-highlightedyank'
+
+
+# tomlのシンタックス有効化
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+
+# 行ごとのコメントアウト
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+
+# fzf
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+
+
+# colorscheme
+[[plugins]]
+repo = 'EdenEast/nightfox.nvim'
+
+[[plugins]]
+repo = 'navarasu/onedark.nvim'
+
+[[plugins]]
+repo = 'folke/tokyonight.nvim'
+
+
+# colorscheme(for dev)
+[[plugins]]
+repo = 'cocopon/colorswatch.vim'
+[[plugins]]
+repo = 'cocopon/inspecthi.vim'
+[[plugins]]
+repo = 'gorodinskiy/vim-coloresque'
