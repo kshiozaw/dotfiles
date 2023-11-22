@@ -63,6 +63,7 @@ endif
 " General settings
 "#######################################################################################
 
+set fileformat=unix
 syntax enable  " シンタックス有効化
 
 set number          " 行番号を表示
