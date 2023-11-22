@@ -20,13 +20,6 @@ end
 # normal
 alias prog='cd ~/Documents/program/'
 
-# python
-# 3.9をデフォルトで使用する
-# 3.11はmitmproxyに使うからインストール
-alias python='python3.9'
-alias python3='python3.9'
-alias pip='python3.9 -m pip'
-
 # gcc/g++
 # include searchにbits/stdc++.h用のpathを追加
 alias gcc='gcc-13 --sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk'
