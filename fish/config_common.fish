@@ -26,5 +26,5 @@ alias vim='nvim'
 alias fvim='vim $(fzf)'
 
 # else
-alias myip='curl ifconfig.co/'
+alias myip='curl inet-ip.info'
 
