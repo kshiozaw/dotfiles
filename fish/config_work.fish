@@ -14,7 +14,7 @@ end
 #######################################
 # SDKMAN
 #######################################
-export JAVA_HOME=$HOME/.sdkman/candidates/java/current
+export JAVA_HOME=/opt/homebrew/Cellar/sdkman-cli/5.18.1/libexec/candidates/java/current
 # set sdkman dir
 if not test -n "$SDKMAN_DIR"
     set -x SDKMAN_DIR (brew --prefix sdkman-cli)/libexec
