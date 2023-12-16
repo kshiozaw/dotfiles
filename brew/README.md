@@ -7,5 +7,5 @@ homebrewのリストをファイルに書き込み
 ### 一覧ファイルを作成コマンド
 
 ```shell
-brew bundle dump --force --file '~/dotfiles/brew/.Brewfile_[personal or work]'
+brew bundle dump --force --file '~/dotfiles/brew/Brewfile_{personal | work}'
 ```

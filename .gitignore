@@ -48,7 +48,7 @@ fish/completions/
 !/iterm2/OneDark.json
 
 ### brew ###
-!/brew/.Brewfile_personal
+!/brew/Brewfile_personal
 # !/brew/.Brewfile_work
 
 ### key ###
