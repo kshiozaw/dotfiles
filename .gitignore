@@ -33,6 +33,10 @@ fish/completions/
 !/fish/functions/fish_prompt_work.fish
 !/fish/functions/mkcd.fish
 
+### pyproject ###
+!/pyproject.toml
+
+
 ### neofetch ###
 !/neofetch/config.conf
 !/neofetch/icon.png

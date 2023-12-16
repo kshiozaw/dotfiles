@@ -51,10 +51,14 @@ endif
 " もし、未インストールものものがあったらインストール
 if dein#check_install()
   call dein#install()
+  call dein#check_update(v:true)
 endif
 
 " plugin削除(rc/dein.toml)した時は下記を実行
 " :call dein#recache_runtimepath()
+
+" upgrade
+" call dein#update()
 
 
 
@@ -243,7 +247,11 @@ let g:ale_sign_warning = ''
 highlight ALEErrorSign   guibg=#2e373b guifg=#e73647
 highlight ALEWarningSign guibg=#2e373b guifg=#e6b422
 
-let g:ale_linters = {'c': ['gcc'], 'cpp': ['gcc']}  " c/cppをgccでチェックする
+let g:ale_linters = {
+  \ 'c': ['gcc'],
+  \ 'cpp': ['gcc'],
+  \ 'python': ['ruff']}
+let g:ale_fixers = {'python': ['black']}
 let g:opts = '-std=c++17 -Wall -Wextra'
 let g:ale_cpp_cc_options    = opts
 let g:ale_cpp_gcc_options   = opts
@@ -319,10 +327,10 @@ let g:coc_global_extensions = [
   \'coc-fish',
   \'coc-html',
   \'coc-java',
-  \'coc-jedi',
   \'coc-json',
   \'coc-lists',
   \'coc-markdownlint',
+  \'coc-pyright',
   \'coc-toml',
   \'coc-vimlsp',
   \'coc-xml',

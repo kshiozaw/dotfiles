@@ -30,5 +30,6 @@
   "diagnostic.warningSign": "c ",
 
   "clangd.fallbackFlags": [ "-std=c++17" ],
-  "jedi.executable.command": "jedi-language-server"
+  "python.formatting.provider": "ruff",
+  "python.linting.ruffEnabled": true
 }
