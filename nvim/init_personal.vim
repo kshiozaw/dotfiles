@@ -332,6 +332,7 @@ let g:coc_global_extensions = [
   \'coc-markdownlint',
   \'coc-pyright',
   \'coc-toml',
+  \'coc-tsserver',
   \'coc-vimlsp',
   \'coc-xml',
   \'coc-yaml'
