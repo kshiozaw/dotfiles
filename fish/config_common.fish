@@ -10,9 +10,9 @@ alias prog='cd ~/Documents/program/'
 alias cat='bat --theme=TwoDark'
 
 # exa
-alias ls='exa -ghHl --icons --git --sort=ext'
-alias la='exa -ghHl --icons --git --sort=ext -a'
-alias tree='exa -ghHl --tree --icons --git --sort=ext'
+alias ls='eza -ghHl --icons --git --sort=ext'
+alias la='eza -ghHl --icons --git --sort=ext -a'
+alias tree='eza -ghHl --tree --icons --git --sort=ext'
 
 # git
 alias gits='git status -u'
