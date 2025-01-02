@@ -9,7 +9,7 @@ alias prog='cd ~/Documents/program/'
 # bat
 alias cat='bat --theme=TwoDark'
 
-# exa
+# eza
 alias ls='eza -ghHl --icons --git --sort=ext'
 alias la='eza -ghHl --icons --git --sort=ext -a'
 alias tree='eza -ghHl --tree --icons --git --sort=ext'

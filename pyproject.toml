@@ -2,7 +2,6 @@
 [tool.ruff]
 line-length = 88
 indent-width = 4
-tab-size = 4
 target-version = "py311"
 task-tags = ["TODO", "FIXME", "XXX"]
 
@@ -69,14 +68,21 @@ select = [
   "RUF",   # Ruff-specific rules
 ]
 ignore = [
+  "TRY003",
+  "ISC002"
 ]
 
-[tool.ruff.isort]
-section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
-split-on-trailing-comma = true
+[tool.ruff.lint.isort]
+force-single-line = true
+lines-after-imports = 2
+
+[tool.ruff.lint.isort.sections]
+# Group all Django imports into a separate section.
+"django" = ["django"]
 
 [tool.ruff.format]
 quote-style = "single"
-indent-style = "tab"
+indent-style = "space"
 docstring-code-format = true
 docstring-code-line-length = 20
+

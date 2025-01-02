@@ -11,6 +11,7 @@ if status is-interactive
   set PATH /opt/homebrew/bin $PATH
   set PATH /opt/homebrew/opt/openjdk@17/bin $PATH
   set PATH /Users/kyokio/.docker/bin $PATH
+  set PATH /opt/homebrew/opt/libpq/bin $PATH
 end
 
 
@@ -19,9 +20,4 @@ end
 #######################################
 # normal
 alias prog='cd ~/Documents/program/'
-
-# gcc/g++
-# include searchにbits/stdc++.h用のpathを追加
-alias gcc='gcc-13 --sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk'
-alias g++='g++-13 --sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk --std=c++17'
-
+alias g++='g++-14';
