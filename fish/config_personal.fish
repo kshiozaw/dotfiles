@@ -12,6 +12,7 @@ if status is-interactive
   set PATH /opt/homebrew/opt/openjdk@17/bin $PATH
   set PATH /Users/kyokio/.docker/bin $PATH
   set PATH /opt/homebrew/opt/libpq/bin $PATH
+  set PATH /opt/homebrew/opt/node@18/bin $PATH
 end
 
 
