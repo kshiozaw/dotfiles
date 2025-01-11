@@ -8,8 +8,8 @@ task-tags = ["TODO", "FIXME", "XXX"]
 
 [tool.ruff.lint]
 select = [
-  "E",     # pycodestyle
-  "W",     # pycodestyle
+  "E",     # pycodestyle errors
+  "W",     # pycodestyle warnings
   "C90",   # mccabe
   "I",     # isort
   "N",     # pep8-naming
@@ -71,6 +71,10 @@ ignore = [
   "TRY003",
   "ISC002"
 ]
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
 
 [tool.ruff.lint.isort]
 force-single-line = true
