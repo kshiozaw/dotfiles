@@ -254,7 +254,7 @@ let g:ale_linters = {
   \ 'c': ['gcc'],
   \ 'cpp': ['gcc'],
   \ 'python': ['ruff']}
-let g:ale_fixers = {'python': ['black']}
+let g:ale_fixers = {"python": ["ruff", "ruff_format"]}
 let g:opts = '-std=c++17 -Wall -Wextra'
 let g:ale_cpp_cc_options    = opts
 let g:ale_cpp_gcc_options   = opts
