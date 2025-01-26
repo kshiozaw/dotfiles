@@ -3,7 +3,7 @@
 line-length = 88
 indent-width = 4
 target-version = "py311"
-task-tags = ["TODO", "FIXME", "XXX"]
+task-tags = ["TODO", "FIXME", "XXX", "NOTE"]
 
 
 [tool.ruff.lint]
