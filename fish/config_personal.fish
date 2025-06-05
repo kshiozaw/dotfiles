@@ -21,4 +21,4 @@ end
 #######################################
 # normal
 alias prog='cd ~/Documents/program/'
-alias g++='g++-14';
+alias g++='g++-14 -std=c++20';
