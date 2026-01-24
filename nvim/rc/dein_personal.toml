@@ -115,3 +115,12 @@ repo = 'cocopon/colorswatch.vim'
 repo = 'cocopon/inspecthi.vim'
 [[plugins]]
 repo = 'gorodinskiy/vim-coloresque'
+
+[[plugins]]
+repo = 'github/copilot.vim'
+
+# TODO: 以下のプラグインを導入検討
+# [[plugins]]
+# repo = 'CopilotC-Nvim/CopilotChat.nvim'
+# [[plugins]]
+# repo = 'nvim-lua/plenary.nvi'
