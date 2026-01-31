@@ -17,6 +17,7 @@ local lsp_servers = {
       )(fname)
     end,
   },
+  ruff = {},
   bashls = {},
   lua_ls = {},
   yamlls = {},
@@ -32,8 +33,8 @@ local formatters = {
   -- "prettierd",  -- for JavaScript/TypeScript formatting
   -- "stylua",     -- for Lua formatting
   -- "eslint_d",   -- for JavaScript/TypeScript linting
-  -- "black",      -- for Python formatting
-  -- "isort",      -- for Python import sorting
+  "black",      -- for Python formatting
+  "isort",      -- for Python import sorting
   -- "flake8",     -- for Python linting
   -- "gofmt",      -- for Go formatting
   -- "golangci-lint",  -- for Go linting
@@ -69,7 +70,7 @@ return {
 
       local lspconfig = require("lspconfig")
       local cmp_capabilities = require('cmp_nvim_lsp').default_capabilities()
-      for server, opts in ipairs(lsp_servers) do
+      for server, opts in pairs(lsp_servers) do
         opts.capabilities = cmp_capabilities
 
         -- root_dirが未定義の場合のデフォルト設定
@@ -83,32 +84,40 @@ return {
     end,
   },
 
-  -- FIXME: 後で直す
-  -- -- none-ls.nvim / mason-null-ls.nvim setup
-  -- {
-  --   "nvimtools/none-ls.nvim",
-  --   dependencies = { "nvim-lua/plenary.nvim" },
-  --   config = function()
-  --     local null_ls = require("null-ls") 
-  --     
-  --     -- formatters table
-  --     local formatters_sources = {}
-  --     for _, formatter in ipairs(formatters) do
-  --       table.insert(formatters_sources, null_ls.builtins.formatting[formatter])
-  --     end
+  -- none-ls.nvim / mason-null-ls.nvim setup
+  {
+    "jay-babu/mason-null-ls.nvim",
+    -- event = { "BufReadPre", "BufNewFile" },
+    dependencies = {
+      "williamboman/mason.nvim",
+      "nvimtools/none-ls.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      local null_ls = require("null-ls")
 
-  --     -- diagnostics table
-  --     local diagnostics_sources = {}
-  --     for _, diagnostic in ipairs(diagnostics) do
-  --       table.insert(diagnostics_sources, null_ls.builtins.diagnostics[diagnostic])
-  --     end
+      -- formatters table
+      local formatters_sources = {}
+      for _, formatter in ipairs(formatters) do
+        table.insert(formatters_sources, null_ls.builtins.formatting[formatter])
+      end
 
-  --     -- none-ls setup
-  --     null_ls.setup({
-  --       diagnostics_format = "[#{m}] #{s} (#{c})",
-  --       sources = vim.list_extend(formatters_sources, diagnostics_sources),
-  --     })
-  --   end,
-  --   event = { "BufReadPre", "BufNewFile" },  -- ファイル読み込み時にのみロード
-  -- },
+      -- diagnostics table
+      local diagnostics_sources = {}
+      for _, diagnostic in ipairs(diagnostics) do
+        table.insert(diagnostics_sources, null_ls.builtins.diagnostics[diagnostic])
+      end
+
+      -- none-ls setup
+      null_ls.setup({
+        diagnostics_format = "[#{m}] #{s} (#{c})",
+        -- sources = vim.list_extend(formatters_sources, diagnostics_sources),
+        sources = {
+          null_ls.builtins.formatting.black,
+          null_ls.builtins.formatting.isort,
+        }
+      })
+    end,
+    event = { "BufReadPre", "BufNewFile" },
+  },
 }

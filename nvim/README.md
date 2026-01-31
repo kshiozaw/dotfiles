@@ -34,4 +34,5 @@ cd [fontsディレクトリ] && curl -fLo "Droid Sans Mono for Powerline Nerd Fo
 
 # refaerences
 
-[【Mac】Lazy.nvimでPythonとLuaのLSP環境を構築する方法 – ナミレリブログ](https://namileriblog.com/mac/lazy_nvim_lsp/#google_vignette)
+- [【Mac】Lazy.nvimでPythonとLuaのLSP環境を構築する方法 – ナミレリブログ](https://namileriblog.com/mac/lazy_nvim_lsp/#google_vignette)
+- [lazy.nvimのインストール方法と使い方](https://zenn.dev/siteyo/articles/980b6205e93914)
