@@ -71,7 +71,16 @@ vim.cmd("colorscheme penny-lane")
 -- # diagnostic
 -- ###############################################
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = {
+    format = function(diagnostic)
+      return string.format(
+        "[%s:%s] %s",
+        diagnostic.source or "unknown",
+        diagnostic.code or 0,
+        diagnostic.message
+      )
+    end,
+  },
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = "✗",
@@ -81,7 +90,7 @@ vim.diagnostic.config({
     }
   },
   underline = true,
-  update_in_insert = true,
+  -- update_in_insert = true,
   severity_sort = false,
   float = { border = "rounded" }
 })
