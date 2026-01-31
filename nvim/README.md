@@ -23,7 +23,6 @@
 ```shell
 mkdir -p [fontsディレクトリ]
 cd [fontsディレクトリ] && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
-
 ```
 
 端末のfontを`DroidSansMono`に設定する。
@@ -32,10 +31,7 @@ cd [fontsディレクトリ] && curl -fLo "Droid Sans Mono for Powerline Nerd Fo
 
 カラースキームで`penny-lane.vim`を使用するために、`nvim/colors/`に[kyokio6002/penny-lane](https://github.com/kyokio6002/penny-lane)をダウンロードする。
 
-## 3. nodejsをインストールする
 
-[neoclide/coc.nvim](https://github.com/neoclide/coc.nvim)を使用するために`nodejs`をインストールする。
+# refaerences
 
-## 4. code-minimapをインストールする
-
-[wfxr/minimap.vim](https://github.com/wfxr/minimap.vim)に使用するために[wfxr/code-minimap](https://github.com/wfxr/code-minimap)をインストールする。
+[【Mac】Lazy.nvimでPythonとLuaのLSP環境を構築する方法 – ナミレリブログ](https://namileriblog.com/mac/lazy_nvim_lsp/#google_vignette)
