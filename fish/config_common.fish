@@ -22,6 +22,9 @@ alias vi='nvim'
 alias vim='nvim'
 alias fvim='vim $(fzf)'
 
+# python
+alias python3='/opt/homebrew/bin/python3.12'
+
 # else
 alias myip='curl inet-ip.info'
 
