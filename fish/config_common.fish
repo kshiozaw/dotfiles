@@ -3,9 +3,6 @@
 #######################################
 # alias
 #######################################
-# normal
-alias prog='cd ~/Documents/program/'
-
 # bat
 alias cat='bat --theme=TwoDark'
 
