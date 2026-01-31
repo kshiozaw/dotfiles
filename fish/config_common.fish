@@ -4,7 +4,7 @@
 # alias
 #######################################
 # bat
-alias cat='bat --theme=TwoDark'
+alias bat='bat --theme=TwoDark'
 
 # eza
 alias ls='eza -ghHl --icons --git --sort=ext'
