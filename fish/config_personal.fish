@@ -23,5 +23,8 @@ end
 alias prog='cd ~/Documents/program/'
 alias g++='g++-14 -std=c++20';
 
+# python
+alias python3='/opt/homebrew/bin/python3.14'
+
 # Added by Antigravity
 fish_add_path /Users/kyokio/.antigravity/antigravity/bin
