@@ -1,4 +1,5 @@
-######################################################################################################################################################## 
+--[[
+########################################################################################################################################################
 #                                                                                                                                                      #
 #       ,-.                               ,-.                                                                                                ____      #
 #   ,--/ /|                           ,--/ /|    ,--,                                                                      ,--,            ,'  , `.    #
@@ -16,99 +17,40 @@
 #                  `--`                                                                                                                                #
 #                                                                                                                                                      #
 ########################################################################################################################################################
+--]]
 
+-- options
+require("config.options")
 
-# plugin管理
-[[plugins]]
-repo = 'Shougo/dein.vim'
+-- bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazypath)
 
+-- Make sure to setup `mapleader` and `maplocalleader` before
+-- loading lazy.nvim so that mappings are correct.
+-- This is also a good place to setup other settings (vim.opt)
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
-# ステータスバーの装飾
-[[plugins]]
-repo = 'vim-airline/vim-airline'
-# airlineのテーマ
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
+-- Setup lazy.nvim
+require("lazy").setup(
+  "plugins",
+  {
+    install = { colorscheme = { "habamax" } },
+    checker = { enabled = true },
+  }
+)
 
-
-# 構文チェック
-[[plugins]]
-repo = 'dense-analysis/ale'
-
-
-# 補完
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-rev = 'release'
-merged = '0'
-
-
-# 非同期ファイラー
-[[plugins]]
-repo = 'preservim/nerdtree'
-
-# NERDTreeのsyntaxの設定
-[[plugins]]
-# repo = 'tiagofumo/vim-nerdtree-syntax-highlight' <-invalid error
-repo = 'johnstef99/vim-nerdtree-syntax-highlight' # <-forkしてfixしたもの
-
-# iconを追加するプラグイン
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-
-# gitdiff
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-
-
-# minimap
-# [[plugins]]
-# repo = 'wfxr/minimap.vim'
-
-
-# auto pairs
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
-
-
-# yank範囲
-[[plugins]]
-repo = 'machakann/vim-highlightedyank'
-
-
-# tomlのシンタックス有効化
-[[plugins]]
-repo = 'cespare/vim-toml'
-
-
-# 行ごとのコメントアウト
-[[plugins]]
-repo = 'tpope/vim-commentary'
-
-
-# fzf
-[[plugins]]
-repo = 'junegunn/fzf'
-build = './install --all'
-
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-depends = 'fzf'
-
-
-# colorscheme
-[[plugins]]
-repo = 'EdenEast/nightfox.nvim'
-
-[[plugins]]
-repo = 'navarasu/onedark.nvim'
-
-
-# colorscheme(for dev)
-[[plugins]]
-repo = 'cocopon/colorswatch.vim'
-[[plugins]]
-repo = 'cocopon/inspecthi.vim'
-[[plugins]]
-repo = 'gorodinskiy/vim-coloresque'
