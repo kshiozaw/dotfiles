@@ -65,7 +65,7 @@ return {
         }
       })
       require("mason-lspconfig").setup({
-        ensure_installed = lsp_servers,
+        ensure_installed = vim.tbl_keys(lsp_servers),
       })
 
       local lspconfig = require("lspconfig")
