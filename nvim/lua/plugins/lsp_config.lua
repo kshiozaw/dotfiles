@@ -111,11 +111,7 @@ return {
       -- none-ls setup
       null_ls.setup({
         diagnostics_format = "[#{m}] #{s} (#{c})",
-        -- sources = vim.list_extend(formatters_sources, diagnostics_sources),
-        sources = {
-          null_ls.builtins.formatting.black,
-          null_ls.builtins.formatting.isort,
-        }
+        sources = vim.list_extend(formatters_sources, diagnostics_sources),
       })
     end,
     event = { "BufReadPre", "BufNewFile" },
