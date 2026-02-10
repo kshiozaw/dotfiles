@@ -47,9 +47,9 @@ local diagnostics = {
 return {
   -- mason.nvim / mason-lspconfig.nvim / lspconfig setup
   {
-    "mason-org/mason.nvim",
+    "williamboman/mason.nvim",
     dependencies = {
-      "mason-org/mason-lspconfig.nvim",
+      "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
       "jay-babu/mason-null-ls.nvim",
       "nvimtools/none-ls.nvim",
