@@ -25,3 +25,6 @@ alias g++='g++-14 -std=c++20';
 
 # Added by Antigravity
 fish_add_path /Users/kyokio/.antigravity/antigravity/bin
+
+# Added by `rbenv init` on 2026年 3月14日 土曜日 13時59分51秒 JST
+status --is-interactive; and rbenv init - --no-rehash fish | source
