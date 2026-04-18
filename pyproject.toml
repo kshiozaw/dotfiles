@@ -3,10 +3,10 @@
 line-length = 88
 indent-width = 4
 target-version = "py311"
-task-tags = ["TODO", "FIXME", "XXX", "NOTE"]
 
 
 [tool.ruff.lint]
+task-tags = ["TODO", "FIXME", "XXX", "NOTE"]
 select = [
   "E",     # pycodestyle errors
   "W",     # pycodestyle warnings
@@ -18,14 +18,14 @@ select = [
   "YTT",   #  flake8-2020
 # "ANN",   # flake8-annotations
   "ASYNC", # flake8-async
-  "TRIO",  # flake8-trio
+  "ASYNC1",# flake8-trio (remapped)
   "S",     # flake8-bandit
   "BLE",   # flake8-blind-except
   "FBT",   # flake8-boolean-trap
   "B",     # flake8-bugbear
   "A",     # flake8-builtins
   "COM",   # flake8-commas
-  "CPY",   # flake8-copyright
+# "CPY",   # flake8-copyright
   "C4",    # flake8-comprehensions
   "DTZ",   # flake8-datetimez
   "T10",   # flake8-debugger
@@ -69,7 +69,8 @@ select = [
 ]
 ignore = [
   "TRY003",
-  "ISC002"
+  "ISC002",
+  "COM812",
 ]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
@@ -90,7 +91,7 @@ indent-style = "space"
 docstring-code-format = true
 docstring-code-line-length = 20
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "test*.py" = [
   "S101", # asserts allowed in tests...
 ]
