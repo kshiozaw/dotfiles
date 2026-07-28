@@ -1,32 +1,37 @@
 -- mason.nvim: LSP,linter,formatterなどの外部ツールを簡単にインストール・管理するためのNeovimプラグイン
--- mason-lspconfig.nvim: mason.nvimの拡張機能で、mason.nvimとnvim-lspconfigと自動的に連携するためのプラグイン
--- nvim-lspconfig: LSPをNeovimに簡単に設定・管理するためのプラグイン
+-- mason-lspconfig.nvim: mason.nvimでインストールしたパッケージ名をLSPサーバー名に対応付けるプラグイン
+-- nvim-lspconfig: 各LSPサーバーのデフォルト定義(lsp/*.lua)を提供するプラグイン
 -- mason-null-ls.nvim: mason.nvimの拡張機能で、null-ls.nvimと自動的に連携するためのプラグイン
 -- none-ls.nvim: LSP以外のlinterやformatterをLSP clientとして利用できるようにするためのプラグイン
+--
+-- Neovim v0.11以降、LSPの設定はビルトインのvim.lsp.config()/vim.lsp.enable()で行う。
+-- 旧来のrequire("lspconfig")["server"].setup()はnvim-lspconfig v3.0.0で削除される。
 
 local lsp_servers = {
-  pyright = {
-    root_dir = function(fname)
-      local lspconfig = require("lspconfig")
-      return lspconfig.util.root_pattern(
-        "pyproject.toml",
-        "setup.py",
-        "setup.cfg",
-        "requirements.txt",
-        ".git"
-      )(fname)
-    end,
-  },
-  ruff = {},
-  bashls = {},
-  lua_ls = {},
-  yamlls = {},
-  jsonls = {},
-  taplo = {},
-  rust_analyzer = {},
-  ts_ls = {},
-  html = {},
-  cssls = {},
+  "pyright",
+  "ruff",
+  "bashls",
+  "lua_ls",
+  "yamlls",
+  "jsonls",
+  "taplo",
+  "rust_analyzer",
+  "ts_ls",
+  "html",
+  "cssls",
+}
+
+-- サーバーごとの追加設定。nvim-lspconfigのデフォルト定義(cmd/filetypes/root_markers/settings)に
+-- 上書きマージされるので、変更したい項目だけ書けばよい。
+--
+-- 注: 設定を {config}/lsp/<name>.lua に置く方法もあるが、runtimepathの後に来るものが
+--     優先されるため、rtp先頭の~/.config/nvimに置いてもnvim-lspconfig側に上書きされてしまう。
+--     nvim-lspconfigを併用する構成ではこちらのvim.lsp.config()を使う。
+local lsp_overrides = {
+  -- 例:
+  -- lua_ls = {
+  --   settings = { Lua = { diagnostics = { globals = { "vim" } } } },
+  -- },
 }
 
 local formatters = {
@@ -53,6 +58,7 @@ return {
       "neovim/nvim-lspconfig",
       "jay-babu/mason-null-ls.nvim",
       "nvimtools/none-ls.nvim",
+      "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
       require("mason").setup({
@@ -64,23 +70,24 @@ return {
           }
         }
       })
+
       require("mason-lspconfig").setup({
-        ensure_installed = vim.tbl_keys(lsp_servers),
+        ensure_installed = lsp_servers,
+        -- 有効化は下のvim.lsp.enable()で明示的に行う。
+        -- 自動有効化を残すと設定が二重に適用されクライアントが重複起動する。
+        automatic_enable = false,
       })
 
-      local lspconfig = require("lspconfig")
-      local cmp_capabilities = require('cmp_nvim_lsp').default_capabilities()
-      for server, opts in pairs(lsp_servers) do
-        opts.capabilities = cmp_capabilities
+      -- 全サーバー共通の設定。nvim-cmpの補完能力(スニペット展開など)をLSPに伝える
+      vim.lsp.config("*", {
+        capabilities = require("cmp_nvim_lsp").default_capabilities(),
+      })
 
-        -- root_dirが未定義の場合のデフォルト設定
-        if not opts.root_dir then
-          opts.root_dir = function(fname)
-            return lspconfig.util.find_git_ancestor(fname) or vim.loop.cwd()
-          end
-        end
-        lspconfig[server].setup(opts)
+      for server, opts in pairs(lsp_overrides) do
+        vim.lsp.config(server, opts)
       end
+
+      vim.lsp.enable(lsp_servers)
     end,
   },
 
